@@ -2,9 +2,9 @@
 using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Windows.Forms;
-using Mist.Animations;
+using MaterialSkin.Animations;
 
-namespace Mist.Controls
+namespace MaterialSkin.Controls
 {
     public class MaterialRaisedButton : Button, IMaterialControl
     {

@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace Mist.Controls
+namespace MaterialSkin.Controls
 {
     public class MaterialLabel : Label, IMaterialControl
     {

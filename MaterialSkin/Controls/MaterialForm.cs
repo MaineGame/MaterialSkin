@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Mist.Controls
+namespace MaterialSkin.Controls
 {
     public class MouseMessageFilter : IMessageFilter
     {

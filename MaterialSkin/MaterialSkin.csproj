@@ -7,7 +7,7 @@
     <ProjectGuid>{8EB7611B-68CD-4B8B-987A-11717E2B250C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Mist</RootNamespace>
+    <RootNamespace>MaterialSkin</RootNamespace>
     <AssemblyName>MaterialSkin</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
