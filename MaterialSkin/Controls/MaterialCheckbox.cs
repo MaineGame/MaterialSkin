@@ -4,9 +4,9 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Security.Principal;
 using System.Windows.Forms;
-using MaterialSkin.Animations;
+using Mist.Animations;
 
-namespace MaterialSkin.Controls
+namespace Mist.Controls
 {
     public class MaterialCheckBox : CheckBox, IMaterialControl
     {

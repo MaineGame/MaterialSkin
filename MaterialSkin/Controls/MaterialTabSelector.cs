@@ -6,9 +6,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Animations;
+using Mist.Animations;
 
-namespace MaterialSkin.Controls
+namespace Mist.Controls
 {
     public class MaterialTabSelector : Control, IMaterialControl
     {

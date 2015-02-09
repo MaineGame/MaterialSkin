@@ -10,10 +10,10 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin.Controls;
+using Mist.Controls;
 
 
-namespace MaterialSkin
+namespace Mist
 {
     public class MaterialSkinManager
     {

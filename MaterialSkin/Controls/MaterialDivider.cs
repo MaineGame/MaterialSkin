@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace MaterialSkin.Controls
+namespace Mist.Controls
 {
     public sealed class MaterialDivider : Control, IMaterialControl
     {
