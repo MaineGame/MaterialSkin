@@ -30,9 +30,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AWSSDK">
-      <HintPath>..\..\Mist\packages\AWSSDK.2.0.12.0\lib\net45\AWSSDK.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
@@ -47,7 +44,6 @@
     <Compile Include="Animations\AnimationDirection.cs" />
     <Compile Include="Animations\AnimationManager.cs" />
     <Compile Include="Animations\Animations.cs" />
-    <Compile Include="AWS\AWSS3Helper.cs" />
     <Compile Include="ColorScheme.cs" />
     <Compile Include="Controls\MaterialCheckBox.cs">
       <SubType>Component</SubType>
@@ -103,9 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Resources\Roboto-Medium.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
