@@ -331,14 +331,6 @@ namespace MaterialSkin.Controls
 
         protected void OnGlobalMouseMove(object sender, MouseEventArgs e)
         {
-            // Convert to client position and pass to Form.MouseMove
-            try
-            {
-                Point clientCursorPos = PointToClient(e.Location);
-                MouseEventArgs new_e = new MouseEventArgs(MouseButtons.None, 0, clientCursorPos.X, clientCursorPos.Y, 0);
-                this.OnMouseMove(new_e);
-            }catch(Exception ex) {
-
             if (!IsDisposed)
             {
                 // Convert to client position and pass to Form.MouseMove
