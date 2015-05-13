@@ -14,6 +14,7 @@ namespace MaterialSkinExample
         private readonly MaterialSkinManager materialSkinManager;
         public MainForm()
         {
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             InitializeComponent();
 
             // Initialize MaterialSkinManager
@@ -47,6 +48,16 @@ namespace MaterialSkinExample
 					materialSkinManager.ColorScheme = new ColorScheme(Primary.Green600, Primary.Green700, Primary.Green200, Accent.Red100, TextShade.WHITE);
 					break;
 	        }
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void materialTabSelector1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
