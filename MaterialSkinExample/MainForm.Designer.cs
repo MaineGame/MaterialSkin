@@ -581,7 +581,6 @@ namespace MaterialSkinExample
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
@@ -619,5 +618,11 @@ namespace MaterialSkinExample
 		private MaterialRaisedButton materialRaisedButton1;
 		private MaterialFlatButton materialFlatButton3;
         private MaterialSingleLineTextField materialSingleLineTextField3;
+		private TabPage tabPage4;
+		private MaterialListView materialListView1;
+		private ColumnHeader columnHeader1;
+		private ColumnHeader columnHeader2;
+		private ColumnHeader columnHeader3;
+		private ColumnHeader columnHeader4;
     }
 }
