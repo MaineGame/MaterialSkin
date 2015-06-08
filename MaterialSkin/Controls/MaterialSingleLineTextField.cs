@@ -16,13 +16,24 @@ namespace MaterialSkin.Controls
         public MaterialSkinManager SkinManager { get { return MaterialSkinManager.Instance; } }
         [Browsable(false)]
         public MouseState MouseState { get; set; }
-        
 
         public override string Text { get { return baseTextBox.Text; } set { baseTextBox.Text = value; } }
+        public new object Tag { get { return baseTextBox.Tag; } set { baseTextBox.Tag = value; } }
+        public new int MaxLength { get { return baseTextBox.MaxLength; } set { baseTextBox.MaxLength = value; } }
+        
+        public string SelectedText { get { return baseTextBox.SelectedText; } set { baseTextBox.SelectedText = value; } }
         public string Hint { get { return baseTextBox.Hint; } set { baseTextBox.Hint = value; } }
+
+        public int SelectionStart { get { return baseTextBox.SelectionStart; } set { baseTextBox.SelectionStart = value; } }
+        public int SelectionLength { get { return baseTextBox.SelectionLength; } set { baseTextBox.SelectionLength = value; } }
+        public int TextLength { get { return baseTextBox.TextLength; } }
 
         public bool UseSystemPasswordChar { get { return baseTextBox.UseSystemPasswordChar; } set { baseTextBox.UseSystemPasswordChar = value; } }
         public char PasswordChar { get { return baseTextBox.PasswordChar; } set { baseTextBox.PasswordChar = value; } }
+
+        public void SelectAll() { baseTextBox.SelectAll(); }
+        public void Clear() { baseTextBox.Clear(); }
+
 
         # region Forwarding events to baseTextBox
         public event EventHandler AcceptsTabChanged
@@ -945,7 +956,7 @@ namespace MaterialSkin.Controls
             {
                 BorderStyle = BorderStyle.None,
                 Font = SkinManager.ROBOTO_REGULAR_11,
-                ForeColor = SkinManager.GetMainTextColor(),
+                ForeColor = SkinManager.GetPrimaryTextColor(),
                 Location = new Point(0, 0),
                 Width = Width,
                 Height = Height - 5
@@ -961,8 +972,12 @@ namespace MaterialSkin.Controls
             BackColorChanged += (sender, args) =>
             {
                 baseTextBox.BackColor = BackColor;
-                baseTextBox.ForeColor = SkinManager.GetMainTextColor();
+                baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
             };
+
+			//Fix for tabstop
+			baseTextBox.TabStop = true;
+			this.TabStop = false;
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
@@ -1007,7 +1022,7 @@ namespace MaterialSkin.Controls
             base.OnCreateControl();
 
             baseTextBox.BackColor = Parent.BackColor;
-            baseTextBox.ForeColor = SkinManager.GetMainTextColor();
+            baseTextBox.ForeColor = SkinManager.GetPrimaryTextColor();
         }
 
         private class BaseTextBox : TextBox
@@ -1041,6 +1056,16 @@ namespace MaterialSkin.Controls
                     SetBasePasswordChar();
                 }
             }
+
+            public new void SelectAll()
+            {
+                BeginInvoke((MethodInvoker) delegate()
+                {
+                    base.Focus();
+                    base.SelectAll();
+                });
+            }
+
 
             private char useSystemPasswordChar = EmptyChar;
             public new bool UseSystemPasswordChar
